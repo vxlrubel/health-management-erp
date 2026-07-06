@@ -30,7 +30,7 @@ return new class extends Migration
             $table->foreign('created_by')->references('id')->on('users')->nullOnDelete();
             $table->foreign('updated_by')->references('id')->on('users')->nullOnDelete();
             $table->foreign('deleted_by')->references('id')->on('users')->nullOnDelete();
-            $table->index(['employee_id', 'schedule_id', 'branch_id', 'status', 'deleted_at']);
+            $table->index(['employee_id', 'schedule_id', 'branch_id', 'status', 'deleted_at'], 'activities_emp_sch_br_status_del_idx');
         });
     }
 
