@@ -15,7 +15,50 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(
+            \App\Repositories\Contracts\BranchRepositoryInterface::class,
+            \App\Repositories\Eloquent\BranchRepository::class,
+        );
+
+        $this->app->bind(
+            \App\Repositories\Contracts\FormRepositoryInterface::class,
+            \App\Repositories\Eloquent\FormRepository::class,
+        );
+
+        $this->app->bind(
+            \App\Repositories\Contracts\FormSubmissionRepositoryInterface::class,
+            \App\Repositories\Eloquent\FormSubmissionRepository::class,
+        );
+
+        $this->app->bind(
+            \App\Repositories\Contracts\InvoiceItemRepositoryInterface::class,
+            \App\Repositories\Eloquent\InvoiceItemRepository::class,
+        );
+
+        $this->app->bind(
+            \App\Repositories\Contracts\InvoicePaymentRepositoryInterface::class,
+            \App\Repositories\Eloquent\InvoicePaymentRepository::class,
+        );
+
+        $this->app->bind(
+            \App\Repositories\Contracts\InvoiceRepositoryInterface::class,
+            \App\Repositories\Eloquent\InvoiceRepository::class,
+        );
+
+        $this->app->bind(
+            \App\Repositories\Contracts\LeaveRepositoryInterface::class,
+            \App\Repositories\Eloquent\LeaveRepository::class,
+        );
+
+        $this->app->bind(
+            \App\Repositories\Contracts\SalaryRecordRepositoryInterface::class,
+            \App\Repositories\Eloquent\SalaryRecordRepository::class,
+        );
+
+        $this->app->bind(
+            \App\Repositories\Contracts\TimesheetRepositoryInterface::class,
+            \App\Repositories\Eloquent\TimesheetRepository::class,
+        );
     }
 
     /**
