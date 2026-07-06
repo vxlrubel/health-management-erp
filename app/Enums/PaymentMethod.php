@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Enums;
+
+enum PaymentMethod: string
+{
+    case Cash = 'cash';
+    case BankTransfer = 'bank_transfer';
+    case Card = 'card';
+    case Cheque = 'cheque';
+    case DirectDebit = 'direct_debit';
+    case Other = 'other';
+}
